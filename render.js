@@ -6,6 +6,10 @@ const Renderer = function () {
         let appendhtml = ""
         for (const post of posts) {
             appendhtml = ""
+
+            //rather than string, jquery element
+
+            //cr8 inner functions, and mini outer functions, the big 1 calls them
             appendhtml += `<div class="post" data-id=${post.id}>${post.text}`
             for (const comment of post.comments) {
                 appendhtml += `<div class="comments" data-id=${comment.id}><span class="delete-comment">X</span>${comment.text}</div>`
